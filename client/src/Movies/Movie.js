@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import MovieCard from './MovieCard';
+import SaveWrapper from './SaveWrapper';
 
 const Movie = props => {
   const [movie, setMovie] = useState({});
@@ -32,7 +32,7 @@ const Movie = props => {
   }
 
   const { title, director, metascore, stars } = movie;
-  return <MovieCard movie={movie} saveMovie={saveMovie} />;
+  return <SaveWrapper movie={movie} saveMovie={saveMovie} />;
 };
 
 export default Movie;
