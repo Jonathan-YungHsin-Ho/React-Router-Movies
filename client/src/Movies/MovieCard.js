@@ -3,6 +3,9 @@ import React from 'react';
 const MovieCard = props => {
   const { title, director, metascore, stars } = props.movie;
 
+  console.log(props.saveMovie);
+  console.log(props.movie);
+
   return (
     <div className="save-wrapper">
       <div className="movie-card">
@@ -24,7 +27,9 @@ const MovieCard = props => {
           ))
         )}
       </div>
-      <div className="save-button">Save</div>
+      <div className="save-button" onClick={() => props.saveMovie()}>
+        Save
+      </div>
     </div>
   );
 };
